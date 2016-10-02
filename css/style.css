@@ -1,0 +1,419 @@
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url("../fonts/Gotham-Medium_gdi.eot"), url("../fonts/Gotham-Medium_gdi.woff") format("woff"), url("../fonts/Gotham-Medium_gdi.ttf") format("truetype"), url("../fonts/Gotham-Medium_gdi.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham-Thin';
+  src: url("../fonts/Gotham-Thin_gdi.eot"), url("../fonts/Gotham-Thin_gdi.woff") format("woff"), url("../fonts/Gotham-Thin_gdi.ttf") format("truetype"), url("../fonts/Gotham-Thin_gdi.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .open span, .menu-item a, .goth {
+  color: #555555;
+  font-family: 'Gotham-Medium';
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+  @media screen and (min-width: 768px) {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .open span, .menu-item a, .goth {
+      letter-spacing: 4px; } }
+  h1.white, .h1.white, h2.white, .h2.white, h3.white, .h3.white, h4.white, .h4.white, h5.white, .h5.white, h6.white, .h6.white, .open span.white, .menu-item a.white, .goth.white {
+    color: #FFFFFF; }
+  h1.red, .h1.red, h2.red, .h2.red, h3.red, .h3.red, h4.red, .h4.red, h5.red, .h5.red, h6.red, .h6.red, .open span.red, .menu-item a.red, .goth.red {
+    color: #FF4E45; }
+
+h1, .h1 {
+  font-size: 20px; }
+  @media screen and (min-width: 768px) {
+    h1, .h1 {
+      font-size: 24px; } }
+
+h2, .h2 {
+  font-size: 18px; }
+  @media screen and (min-width: 768px) {
+    h2, .h2 {
+      font-size: 24px; } }
+
+h3, .h3 {
+  font-size: 14px; }
+  @media screen and (min-width: 768px) {
+    h3, .h3 {
+      font-size: 18px; } }
+
+p {
+  color: #A3A69E;
+  font-size: 14px;
+  font-family: 'Georgia';
+  margin-bottom: 10px; }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    p {
+      font-size: 12px; } }
+  @media screen and (min-width: 768px) {
+    p {
+      font-size: 16px; } }
+  p.white {
+    color: #FFFFFF; }
+
+a, a:hover, a:focus, span {
+  color: #232323;
+  outline: none;
+  text-decoration: none; }
+  a.white, a:hover.white, a:focus.white, span.white {
+    color: #FFF; }
+  a.red, a:hover.red, a:focus.red, span.red {
+    color: #FF4E45; }
+
+.carousel-module {
+  height: 80%;
+  overflow: hidden; }
+  .carousel-module .slick-list {
+    overflow: hidden; }
+  .carousel-module .carousel {
+    height: 100%;
+    outline: none; }
+    .carousel-module .carousel .slick-list {
+      height: 100%; }
+    .carousel-module .carousel .slick-track {
+      height: 100%;
+      padding: 14% 0; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+        .carousel-module .carousel .slick-track {
+          padding: 6% 0; } }
+      @media screen and (min-width: 768px) {
+        .carousel-module .carousel .slick-track {
+          padding: 7% 0; } }
+    .carousel-module .carousel .slide {
+      display: inline-block !important;
+      float: left;
+      padding: 0px 15px 0px;
+      position: relative;
+      outline: none;
+      z-index: 1000;
+      -webkit-transform: translateX(0);
+      -ms-transform: translate(0px, 0px);
+      transform: translateX(0);
+      opacity: 1;
+      -webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+      -moz-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+      -ms-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+      -o-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+      transition: all 1s cubic-bezier(0.23, 1, 0.32, 1); }
+      @media screen and (min-width: 768px) {
+        .carousel-module .carousel .slide {
+          padding: 0px 15px; } }
+    .carousel-module .carousel .slide.outofview {
+      -webkit-transform: translateX(600px);
+      -ms-transform: translate(600px, 0px);
+      transform: translateX(600px);
+      opacity: 0; }
+    .carousel-module .carousel .slide .content {
+      background: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0px 15px 35px #BFBDBD;
+      height: 100%;
+      display: block !important;
+      margin: 0px auto;
+      outline: none;
+      overflow: hidden;
+      position: relative;
+      text-decoration: none;
+      width: 240px; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+        .carousel-module .carousel .slide .content {
+          width: 300px; } }
+      @media screen and (min-width: 768px) {
+        .carousel-module .carousel .slide .content {
+          width: 500px; } }
+      .carousel-module .carousel .slide .content.intro-wrapper {
+        background: transparent; }
+        .carousel-module .carousel .slide .content.intro-wrapper .logo-wrapper {
+          background-color: #FF4E45;
+          padding: 50px 20px 0; }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+            .carousel-module .carousel .slide .content.intro-wrapper .logo-wrapper {
+              padding: 20px 20px 0; } }
+          @media screen and (min-width: 768px) {
+            .carousel-module .carousel .slide .content.intro-wrapper .logo-wrapper {
+              padding: 60px 50px 0; } }
+          .carousel-module .carousel .slide .content.intro-wrapper .logo-wrapper p {
+            padding: 0;
+            text-align: left;
+            max-width: 300px; }
+        .carousel-module .carousel .slide .content.intro-wrapper .desc-wrapper {
+          background-color: #FFFFFF; }
+          .carousel-module .carousel .slide .content.intro-wrapper .desc-wrapper .open span {
+            color: #555555; }
+      .carousel-module .carousel .slide .content.contact-wrapper {
+        background: transparent; }
+        .carousel-module .carousel .slide .content.contact-wrapper .logo-wrapper {
+          background-color: #FF4E45;
+          display: table;
+          height: 40%;
+          text-align: center;
+          padding: 0 20px;
+          width: 100%; }
+          .carousel-module .carousel .slide .content.contact-wrapper .logo-wrapper h3 {
+            display: table-cell;
+            vertical-align: middle; }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+            .carousel-module .carousel .slide .content.contact-wrapper .logo-wrapper {
+              height: 30%; } }
+          @media screen and (min-width: 768px) {
+            .carousel-module .carousel .slide .content.contact-wrapper .logo-wrapper {
+              padding: 20px 0; } }
+        .carousel-module .carousel .slide .content.contact-wrapper .desc-wrapper {
+          background-color: #FFFFFF;
+          height: 60%; }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+            .carousel-module .carousel .slide .content.contact-wrapper .desc-wrapper {
+              height: 70%; } }
+          .carousel-module .carousel .slide .content.contact-wrapper .desc-wrapper a {
+            border-bottom: 1px solid #E9E6E6;
+            display: table;
+            height: 25%;
+            letter-spacing: 2px;
+            margin: 0;
+            padding: 0 20px;
+            text-align: left;
+            width: 100%; }
+            .carousel-module .carousel .slide .content.contact-wrapper .desc-wrapper a:last-child {
+              border-bottom: none; }
+            .carousel-module .carousel .slide .content.contact-wrapper .desc-wrapper a span {
+              color: #A3A69E;
+              display: table-cell;
+              font-family: 'Gotham-Medium';
+              font-size: 12px;
+              text-transform: uppercase;
+              vertical-align: middle; }
+      .carousel-module .carousel .slide .content .logo-wrapper {
+        height: 90%;
+        padding: 20px;
+        position: relative; }
+        .carousel-module .carousel .slide .content .logo-wrapper .pointer {
+          background: url("../imgs/carousel-card-pointer.png") no-repeat;
+          display: block;
+          height: 70px;
+          width: 70px;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          margin-left: -35px; }
+          @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+            .carousel-module .carousel .slide .content .logo-wrapper .pointer {
+              /* on retina, use image that's scaled by 2 */
+              background-image: url("../imgs/carousel-card-pointer@2x.png");
+              background-size: 70px 70px; } }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+            .carousel-module .carousel .slide .content .logo-wrapper .pointer {
+              background: none; } }
+          @media screen and (min-width: 768px) {
+            .carousel-module .carousel .slide .content .logo-wrapper .pointer {
+              bottom: 20px; } }
+          @media screen and (min-width: 992px) {
+            .carousel-module .carousel .slide .content .logo-wrapper .pointer {
+              display: none; } }
+        @media screen and (min-width: 768px) {
+          .carousel-module .carousel .slide .content .logo-wrapper p {
+            padding: 0 100px; } }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+          .carousel-module .carousel .slide .content .logo-wrapper {
+            height: 85%;
+            padding: 0 20px; } }
+      .carousel-module .carousel .slide .content .desc-wrapper {
+        background: #555555;
+        height: 10%; }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+          .carousel-module .carousel .slide .content .desc-wrapper {
+            height: 15%; } }
+      .carousel-module .carousel .slide .content .open {
+        cursor: pointer;
+        color: #FFF;
+        height: 100%;
+        font-style: normal;
+        font-size: 10px;
+        text-align: center;
+        text-transform: uppercase; }
+        @media screen and (min-width: 768px) {
+          .carousel-module .carousel .slide .content .open {
+            font-size: 12px; } }
+        .carousel-module .carousel .slide .content .open span {
+          color: #FFF; }
+
+.pagination {
+  color: #555555;
+  display: none;
+  font-family: 'Gotham-Medium';
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+  .pagination .slick-prev {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 15px;
+    outline: none; }
+  .pagination .slick-next {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 15px;
+    outline: none; }
+  .pagination .slick-disabled {
+    opacity: 0;
+    cursor: default; }
+  .pagination .index, .pagination .total {
+    color: #555555;
+    font-family: 'Gotham-Medium'; }
+
+body {
+  background: #F3F3F3; }
+  body.carousel-page {
+    overflow: hidden;
+    position: relative; }
+
+html {
+  overflow: scroll;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000; }
+
+.margin-small {
+  margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .margin-small {
+      margin-bottom: 10px; } }
+
+.margin-medium {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .margin-medium {
+      margin-bottom: 20px; } }
+
+.margin-large {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .margin-large {
+      margin-bottom: 40px; } }
+
+hr {
+  border-top: 1px solid #A3A69E;
+  margin: 0px auto 10px;
+  width: 29px; }
+  @media screen and (min-width: 768px) {
+    hr {
+      margin-bottom: 20px; } }
+
+.align-center {
+  text-align: center; }
+
+.flex-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.align-bottom {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.no-padding {
+  padding: 0; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.full-height {
+  height: 100%; }
+  @media screen and (min-width: 768px) {
+    .full-height {
+      height: 100%; } }
+
+.header {
+  height: 10%; }
+
+.footer {
+  height: 10%; }
+
+.logo {
+  display: block;
+  height: 100px;
+  width: 200px;
+  margin: 0 auto; }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    .logo {
+      background-size: 150px 75px !important;
+      height: 75px;
+      width: 150px; } }
+
+.patron-logo {
+  background: url("../imgs/carousel-card-patron.png") no-repeat; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .patron-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../imgs/carousel-card-patron@2x.png");
+      background-size: 200px 100px; } }
+  .patron-logo.large {
+    background: url("../imgs/portfolio/portfolio-patron.png") no-repeat; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      .patron-logo.large {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../imgs/portfolio/portfolio-patron@2x.png");
+        background-size: 200px 100px; } }
+
+.hobbylobby-logo {
+  background: url("../imgs/carousel-card-hobbylobby.png") no-repeat; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .hobbylobby-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../imgs/carousel-card-hobbylobby@2x.png");
+      background-size: 200px 100px; } }
+
+.southwest-logo {
+  background: url("../imgs/carousel-card-southwest.png") no-repeat; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .southwest-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../imgs/carousel-card-southwest@2x.png");
+      background-size: 200px 100px; } }
+
+.sxsw-logo {
+  background: url("../imgs/carousel-card-sxsw.png") no-repeat; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .sxsw-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../imgs/carousel-card-sxsw@2x.png");
+      background-size: 200px 100px; } }
+
+.blackberry-logo {
+  background: url("../imgs/carousel-card-blackberry.png") no-repeat; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .blackberry-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../imgs/carousel-card-blackberry@2x.png");
+      background-size: 200px 100px; } }
