@@ -12,58 +12,81 @@ html {
     padding-left: 10px;
 	}
 
-	.project-nav {
-		background: #F3F3F3;
-		box-shadow: 0px 15px 35px #BFBDBD;
-    overflow: scroll;
-		margin: 0;
-		//position: absolute;
-		z-index: 1;
-    padding-bottom: 20px;
+  .landing{
+    height: 50px;
+    margin: 50px;
+    button {
+      display: block;
+      margin: 20px;
+    }
+  }
+  .nav {
+    &.landing {
+      width: 100%;
+       @media screen and (max-width: 768px) {
+        display: block;
+       }
+    }
+  	&.project-nav {
+  		background: #F3F3F3;
+  		box-shadow: 0px 15px 35px #BFBDBD;
+      overflow: scroll;
+  		margin: 0;
+  		//position: absolute;
+  		z-index: 1;
+      padding-bottom: 20px;
 
-		li {
-			display: table;
-			height: 18%;
-			list-style-type: none;
-			text-align: center;
-			padding: 20px 0;
-			width: 100%;
+  		li {
+  			display: table;
+  			height: 18%;
+  			list-style-type: none;
+  			text-align: center;
+  			padding: 20px 0;
+  			width: 100%;
 
-			&:last-child {
-				border-bottom: 0px;
-				height: 10%;
-			}
+  			&:last-child {
+  				border-bottom: 0px;
+  				height: 10%;
+  			}
 
-			a {
-				display: table-cell;
-				font-size: 12px;
-				padding: 0 20px;
-				vertical-align: bottom;
+  			a {
+  				display: table-cell;
+  				font-size: 12px;
+  				padding: 0 20px;
+  				vertical-align: bottom;
 
-				.logo {
-					height: 50px;
-					width: 100px;
-					background-size: 100px 50px;
-				}
-			}
-		}
+  				.logo {
+  					height: 50px;
+  					width: 100px;
+  					background-size: 100px 50px;
+  				}
+  			}
+  		}
 
-		@media screen and (min-width: 992px) {
-			position: static;
+  		@media screen and (min-width: 992px) {
+  			position: static;
 
-			li a {
-				letter-spacing: 2px;
-			}
-		}
-	}
+  			li a {
+  				letter-spacing: 2px;
+  			}
+  		}
+  	}
+  }
 
   .project-list {
     overflow: scroll;
-    .project-card {
-      list-style-type: none;
-      margin-bottom: 10px;
-      text-align: center;
-      height: 33%;
+    ul {
+      padding-top: 20px;
+      .project-card {
+        list-style-type: none;
+        margin-bottom: 10px;
+        text-align: center;
+        height: 45%;
+        @media screen and (min-width: 768px) {
+          height: 33%;
+        }
+    }
+
       div{
         display: table;
         border-radius: 10px;
@@ -83,11 +106,28 @@ html {
     }
 
   }
+  @-webkit-keyframes fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  .project-list {
+    opacity: 1;
 
+    -webkit-animation: fade-in 2s;
+      -moz-animation:    fade-in 2s;
+      -o-animation:      fade-in 2s;
+      animation:         fade-in 2s;
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
 	.project-desc {
 		overflow: hidden;
 		//position: absolute;
-
+    &[aria-hidden="true"]{
+      height: 0;
+    }
 		li {
 			display: block;
 			text-align: center;
@@ -99,13 +139,13 @@ html {
 			-ms-transform: translate(0px, 0px);
 			transform: translateX(0);
 			opacity: 1;
-			
+
 			@include shared_customTransition(all, 2s);
 
 			&.outofview {
-				-webkit-transform: translateX(600px);
+				-webkit-transform: translateX(1000px);
 				-ms-transform: translate(600px, 0px);
-				transform: translateX(600px);
+				transform: translateX(1000px);
 				opacity: 0;
 			}
 
@@ -113,7 +153,10 @@ html {
 				border-radius: 10px;
 				box-shadow: 0px 15px 35px #BFBDBD;
 				position: absolute;
-				top: 50px; right: 50px; bottom: 50px; left: 50px;
+        top: 50px; right: 50px; bottom: 50px; left: 30px;
+        @media screen and (min-width: 768px) {
+          top: 50px; right: 35px; bottom: 50px; left: 0;
+        }
         .close {
           margin-top: 10px;
           margin-right: 12px;

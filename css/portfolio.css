@@ -6,57 +6,89 @@ html {
   .portfolio-page ul {
     margin: 0;
     padding-left: 10px; }
-  .portfolio-page .project-nav {
+  .portfolio-page .landing {
+    height: 50px;
+    margin: 50px; }
+    .portfolio-page .landing button {
+      display: block;
+      margin: 20px; }
+  .portfolio-page .nav.landing {
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .portfolio-page .nav.landing {
+        display: block; } }
+  .portfolio-page .nav.project-nav {
     background: #F3F3F3;
     box-shadow: 0px 15px 35px #BFBDBD;
     overflow: scroll;
     margin: 0;
     z-index: 1;
     padding-bottom: 20px; }
-    .portfolio-page .project-nav li {
+    .portfolio-page .nav.project-nav li {
       display: table;
       height: 18%;
       list-style-type: none;
       text-align: center;
       padding: 20px 0;
       width: 100%; }
-      .portfolio-page .project-nav li:last-child {
+      .portfolio-page .nav.project-nav li:last-child {
         border-bottom: 0px;
         height: 10%; }
-      .portfolio-page .project-nav li a {
+      .portfolio-page .nav.project-nav li a {
         display: table-cell;
         font-size: 12px;
         padding: 0 20px;
         vertical-align: bottom; }
-        .portfolio-page .project-nav li a .logo {
+        .portfolio-page .nav.project-nav li a .logo {
           height: 50px;
           width: 100px;
           background-size: 100px 50px; }
     @media screen and (min-width: 992px) {
-      .portfolio-page .project-nav {
+      .portfolio-page .nav.project-nav {
         position: static; }
-        .portfolio-page .project-nav li a {
+        .portfolio-page .nav.project-nav li a {
           letter-spacing: 2px; } }
   .portfolio-page .project-list {
     overflow: scroll; }
-    .portfolio-page .project-list .project-card {
-      list-style-type: none;
-      margin-bottom: 10px;
-      text-align: center;
-      height: 33%; }
-      .portfolio-page .project-list .project-card div {
+    .portfolio-page .project-list ul {
+      padding-top: 20px; }
+      .portfolio-page .project-list ul .project-card {
+        list-style-type: none;
+        margin-bottom: 10px;
+        text-align: center;
+        height: 45%; }
+        @media screen and (min-width: 768px) {
+          .portfolio-page .project-list ul .project-card {
+            height: 33%; } }
+      .portfolio-page .project-list ul div {
         display: table;
         border-radius: 10px;
         box-shadow: 0px 0px 20px #BFBDBD;
         width: 100%;
         height: 100%; }
-        .portfolio-page .project-list .project-card div p {
+        .portfolio-page .project-list ul div p {
           display: table-cell;
           vertical-align: middle; }
-      .portfolio-page .project-list .project-card.highlighted div {
+      .portfolio-page .project-list ul.highlighted div {
         box-shadow: 0px 15px 35px #BFBDBD; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .portfolio-page .project-list {
+    opacity: 1;
+    -webkit-animation: fade-in 2s;
+    -moz-animation: fade-in 2s;
+    -o-animation: fade-in 2s;
+    animation: fade-in 2s; }
+    .portfolio-page .project-list.hidden {
+      opacity: 0; }
   .portfolio-page .project-desc {
     overflow: hidden; }
+    .portfolio-page .project-desc[aria-hidden="true"] {
+      height: 0; }
     .portfolio-page .project-desc li {
       display: block;
       text-align: center;
@@ -73,9 +105,9 @@ html {
       -o-transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
       transition: all 2s cubic-bezier(0.23, 1, 0.32, 1); }
       .portfolio-page .project-desc li.outofview {
-        -webkit-transform: translateX(600px);
+        -webkit-transform: translateX(1000px);
         -ms-transform: translate(600px, 0px);
-        transform: translateX(600px);
+        transform: translateX(1000px);
         opacity: 0; }
       .portfolio-page .project-desc li div {
         border-radius: 10px;
@@ -84,7 +116,13 @@ html {
         top: 50px;
         right: 50px;
         bottom: 50px;
-        left: 50px; }
+        left: 30px; }
+        @media screen and (min-width: 768px) {
+          .portfolio-page .project-desc li div {
+            top: 50px;
+            right: 35px;
+            bottom: 50px;
+            left: 0; } }
         .portfolio-page .project-desc li div .close {
           margin-top: 10px;
           margin-right: 12px;

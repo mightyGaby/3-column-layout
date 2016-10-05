@@ -288,7 +288,8 @@ html {
 
 /* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000; }
+  background: #FF0000;
+  width: 100%; }
 
 .margin-small {
   margin-bottom: 10px; }
