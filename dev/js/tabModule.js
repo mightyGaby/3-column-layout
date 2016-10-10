@@ -32,8 +32,7 @@
 
 		events:function() {
 			this.root
-        .on('click', '.show-all-projects', $.proxy(this.onclick_hideLanding, this))
-				.on('click', '.nav-item', $.proxy(this.onclick_showProjects, this))
+				.on('click', '.nav-item', $.proxy(this.onclick_highlightProjects, this))
         .on('click', '.project-card', $.proxy(this.onclick_showDetails, this))
         .on('click', '.close', $.proxy(this.onclick_hideDetails, this));
 		},
@@ -45,13 +44,13 @@
       this.projectsContainer.removeClass('hidden');
     },
 
-		onclick_showProjects: function(e) {
+		onclick_highlightProjects: function(e) {
 			e.preventDefault();
 
 			var navItem = $(e.currentTarget),
 				  itemCategory = navItem.attr('data-category');
 
-      this.showProjects(navItem, itemCategory);
+      this.highlightProjects(navItem, itemCategory);
 		},
 
     onclick_showDetails: function(e) {
@@ -82,9 +81,6 @@
       container.animate({
           scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
       });
-      // container.scrollTop(git remote add origin https://github.com/mightyGaby/3-column-layout.git
-      //     scrollTo.offset().top - container.offset().top + container.scrollTop()
-      // );
     },
 
     collapseProjects: function() {
@@ -102,10 +98,9 @@
       });
     },
 
-    showProjects: function(navItem, category) {
+    highlightProjects: function(navItem, category) {
       var deselectProjectCard = this.root.find('.project-card.highlighted'),
           selectProjectCard = this.root.find('.project-card.' + category);
-
       deselectProjectCard.removeClass('highlighted');
       selectProjectCard.addClass('highlighted');
     },

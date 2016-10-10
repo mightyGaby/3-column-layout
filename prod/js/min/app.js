@@ -1,0 +1,1 @@
+!function(n){var i=window.js||(window.js={});i.app={init:function(){this.initComponents()},initComponents:function(){n("div.landing").each(function(n,o){new i.splashModule(o)}),n(".tab-module").each(function(n,o){new i.tabModule(o)})}},n(document).ready(n.proxy(i.app.init,i.app))}(jQuery);

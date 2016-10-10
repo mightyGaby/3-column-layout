@@ -1,0 +1,12 @@
+mixin project-card(index, projectName, category)
+  li(class="col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card #{category}" data-desc-index="#{index}")
+    div
+      //- insert image here
+      p #{projectName}
+
+mixin project-description(index, path)
+  - var projectFile = 'include project-descriptions/' + path + '.jade'
+  li.desc-item.outofview(data-desc-index="#{index}")
+    div
+      button.close &#10005;
+      p: test

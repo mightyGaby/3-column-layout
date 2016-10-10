@@ -7,13 +7,12 @@
             this.initComponents();
 		},
         initComponents: function(){
-
-            // carousel component
-            $(".carousel-module").each(function(i, el){
-                new js.carouselModule(el);
+            // splash page component
+            $("div.landing").each(function(i, el){
+                new js.splashModule(el);
             });
 
-            // tab component
+            // project navigation component
             $(".tab-module").each(function(i, el){
                 new js.tabModule(el);
             });
