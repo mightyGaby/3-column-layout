@@ -4,9 +4,3 @@ mixin project-card(index, projectName, category)
       //- insert image here
       p #{projectName}
 
-mixin project-description(index, path)
-  - var projectFile = 'include project-descriptions/' + path + '.jade'
-  li.desc-item.outofview(data-desc-index="#{index}")
-    div
-      button.close &#10005;
-      p: test

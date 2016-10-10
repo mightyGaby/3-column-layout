@@ -1,30 +1,15 @@
-include ../mixins.jade
-
-- var projects = [{ "name": "backpack holder", "categoryClass": "hcd", "fileName": "backpack"}, {"name": "welding", "categoryClass": "hcd mgt", "fileName": "welding"}, {"name": "Lady Mafia", "categoryClass": "dev soc", "fileName": "ladymafia"}, {"name": "continuous improvement", "categoryClass":"mfg ops", "fileName": "continuousimprovement"}, {"name": "ypn", "categoryClass": "soc mgt", "fileName": "ypn"}, {"name": "refresh project", "categoryClass": "hcd", "fileName": "refresh"}, {"name": "pepsi innovation", "categoryClass": "hcd", "fileName": "pepsi"}, {"name": "rotary", "categoryClass": "mgt ops mfg", "fileName": "rotary"}, {"name": "JCD", "categoryClass": "edu hcd soc", "fileName": "jcd"}, {"name": "freelance project", "categoryClass": "dev", "fileName": "veronicabruce"}, {"name": "kindlies", "categoryClass": "dev soc", "fileName": "kindlies"}, {"name": "waze for bikes", "categoryClass": "dev", "fileName": "waze"}]
-- var index = 1
-
 ul.col-xs-12.col-sm-5.col-md-6.full-height.project-desc(aria-hidden='true')
-  - each project in projects
-    +project-description(index, project.fileName)
-    - index = index + 1
+  include ../project-descriptions/backpack.jade
+  include ../project-descriptions/continuousimprovement.jade
+  include ../project-descriptions/jcd.jade
+  include ../project-descriptions/kindlies.jade
+  include ../project-descriptions/ladymafia.jade
+  include ../project-descriptions/pepsi.jade
+  include ../project-descriptions/refresh.jade
+  include ../project-descriptions/rotary.jade
+  include ../project-descriptions/veronicabruce.jade
+  include ../project-descriptions/waze.jade
+  include ../project-descriptions/welding.jade
+  include ../project-descriptions/ypn.jade
 
-  //- li.desc-item.outofview(data-dismiss='desc-item', data-desc-index='1')
-  //-   div
-  //-     a.close(href='#', type='button') ✕
-  //-     img(src='imgs/book-southwest.png')
-  //- li.desc-item.outofview(data-dismiss='desc-item', data-desc-index='2')
-  //-   div
-  //-     a.close(href='#', type='button') ✕
-  //-     img(src='imgs/book-southwest.png')
-  //- li.desc-item.outofview(data-dismiss='desc-item', data-desc-index='3')
-  //-   div
-  //-     a.close(href='#', type='button') ✕
-  //-     img(src='imgs/book-southwest.png')
-  //- li.desc-item.outofview(data-dismiss='desc-item', data-desc-index='4')
-  //-   div
-  //-     a.close(href='#', type='button') ✕
-  //-     img(src='imgs/book-southwest.png')
-  //- li.desc-item.outofview(data-dismiss='desc-item', data-desc-index='5')
-  //-   div
-  //-     a.close(href='#', type='button') ✕
-  //-     img(src='imgs/book-southwest.png')
+
