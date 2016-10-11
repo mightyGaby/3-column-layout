@@ -1,8 +1,21 @@
 mixin project-card(index, projectName, category)
-  li(class="col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card #{category}" data-desc-index="#{index}")
-    div
+  li(class="hidden-xs col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card #{category}" data-desc-index="#{index}")
+    .content
       //- insert image here
       p #{projectName}
 
-mixin nav-item(name, href)
+mixin global-nav-item(name, href)
   li: a(hrev="#{href}") #{name}
+
+mixin project-nav-item(title, category)
+  li: a.goth.nav-item(data-category="#{category}" href="#") #{title}
+
+
+mixin project-card-mobile(index, projectName, category)
+  li(class="visible-xs-block col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card flip-container #{category}" data-desc-index="#{index}" ontouchstart="this.classList.toggle('click');")
+    .flipper
+      .front
+          //- insert image here
+          p #{projectName}
+      .back
+        p some content

@@ -10,7 +10,7 @@
   js.splashModule.prototype = {
     init: function(){
       //global vars
-      this.nav = $('.landing.nav');
+      this.nav = $('.project-nav');
       this.navItem = this.nav.find('.nav-item');
       this.descContainer = this.root.find('.project-desc');
       this.projectsContainer = $('.project-list');
@@ -27,8 +27,11 @@
     onclick_hideLanding: function(e) {
       e.preventDefault();
       this.root.hide();
-      this.nav.removeClass('landing').addClass('hidden-xs project-nav');
+      this.nav.removeClass('hidden');
       this.projectsContainer.removeClass('hidden');
+      $(".project-card ").on('click',function(){
+        $(this).toggleClass("clicked")
+      });
     }
   };
 })(jQuery);

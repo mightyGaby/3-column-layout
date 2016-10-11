@@ -8,7 +8,7 @@
 		},
         initComponents: function(){
             // splash page component
-            $("div.landing").each(function(i, el){
+            $(".splash").each(function(i, el){
                 new js.splashModule(el);
             });
 

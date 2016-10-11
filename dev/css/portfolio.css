@@ -1,3 +1,44 @@
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px; }
+
+/* flip the pane when hovered */
+.flip-container.clicked .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+  transform: rotateY(180deg); }
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px; }
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg); }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 html {
   height: 100%; }
 
@@ -7,8 +48,8 @@ html {
     margin: 0;
     padding-left: 10px; }
   .portfolio-page .landing {
-    height: 50px;
-    margin: 50px; }
+    /*    height: 50px;
+    margin: 50px;*/ }
     .portfolio-page .landing button {
       display: block;
       margin: 20px; }
@@ -23,8 +64,16 @@ html {
 */
     overflow: scroll;
     margin: 0;
-    z-index: 1;
-    padding-bottom: 20px; }
+    /*  		z-index: 1;
+*/
+    padding-bottom: 20px;
+    opacity: 1;
+    -webkit-animation: fade-in 2s;
+    -moz-animation: fade-in 2s;
+    -o-animation: fade-in 2s;
+    animation: fade-in 2s; }
+    .portfolio-page .nav.project-nav.hidden {
+      opacity: 0; }
     .portfolio-page .nav.project-nav li {
       display: table;
       height: 18%;
@@ -50,16 +99,23 @@ html {
         .portfolio-page .nav.project-nav li a {
           letter-spacing: 2px; } }
   .portfolio-page .project-list {
-    overflow: scroll; }
+    overflow: scroll;
+    opacity: 1;
+    -webkit-animation: fade-in 2s;
+    -moz-animation: fade-in 2s;
+    -o-animation: fade-in 2s;
+    animation: fade-in 2s; }
+    .portfolio-page .project-list.hidden {
+      opacity: 0; }
     .portfolio-page .project-list ul {
       padding-top: 20px; }
-    .portfolio-page .project-list div {
+    .portfolio-page .project-list .content, .portfolio-page .project-list .flipper {
       display: table;
       border-radius: 10px;
       box-shadow: 0px 0px 20px #BFBDBD;
       width: 100%;
       height: 100%; }
-      .portfolio-page .project-list div p {
+      .portfolio-page .project-list .content p, .portfolio-page .project-list .flipper p {
         display: table-cell;
         vertical-align: middle; }
     .portfolio-page .project-list .project-card {
@@ -72,20 +128,6 @@ html {
       @media screen and (min-width: 768px) {
         .portfolio-page .project-list .project-card {
           height: 33%; } }
-
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-  .portfolio-page .project-list {
-    opacity: 1;
-    -webkit-animation: fade-in 2s;
-    -moz-animation: fade-in 2s;
-    -o-animation: fade-in 2s;
-    animation: fade-in 2s; }
-    .portfolio-page .project-list.hidden {
-      opacity: 0; }
   .portfolio-page .project-desc {
     overflow: hidden; }
     .portfolio-page .project-desc[aria-hidden="true"] {
