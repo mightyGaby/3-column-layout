@@ -1,0 +1,297 @@
+.carousel-module {
+	height: 80%;
+	overflow: hidden;
+
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.carousel {
+		height: 100%;
+		outline: none;
+
+		.slick-list {
+			height: 100%;
+		}
+
+		.slick-track {
+			height: 100%;
+			padding: 14% 0;
+
+			@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+				padding: 6% 0;
+			}
+
+			@media screen and (min-width: 768px) {
+				padding: 7% 0;
+			}
+		}
+
+		.slide {
+			display: inline-block !important;
+			float: left;
+			padding: 0px 15px 0px;
+			position: relative;
+			outline: none;
+			z-index: 1000;
+
+			@media screen and (min-width: 768px) {
+				padding: 0px 15px;
+			}
+
+			-webkit-transform: translateX(0);
+			-ms-transform: translate(0px, 0px);
+			transform: translateX(0);
+			opacity: 1;
+			
+			@include shared_customTransition(all, 1s);
+		}
+
+		.slide.outofview {
+			-webkit-transform: translateX(600px);
+			-ms-transform: translate(600px, 0px);
+			transform: translateX(600px);
+			opacity: 0;
+		}
+
+		.slide .content {
+			background: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0px 15px 35px #BFBDBD;
+			height: 100%;
+			display: block !important;
+			margin: 0px auto;
+			outline: none;
+			overflow: hidden;
+			position: relative;
+			text-decoration: none;
+			width: 240px;
+
+			@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+				width: 300px;
+			}
+
+			@media screen and (min-width: 768px) {
+				width: 500px;
+			}
+
+			&.intro-wrapper {
+				background: transparent;
+
+				.logo-wrapper {
+					background-color: #FF4E45;
+					//background-color: #82E0B2;
+					padding: 50px 20px 0;
+
+					@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+						padding: 20px 20px 0;
+					}
+
+					@media screen and (min-width: 768px) {
+						padding: 60px 50px 0;
+					}
+
+					p {
+						padding: 0;
+						text-align: left;
+						max-width: 300px;
+					}
+				}
+
+				.desc-wrapper {
+					background-color: #FFFFFF;
+
+					.open span {
+						color: #555555;
+					}
+				}
+			}
+
+			&.contact-wrapper {
+				background: transparent;
+
+				.logo-wrapper {
+					background-color: #FF4E45;
+					//background-color: #82E0B2;
+					display: table;
+					height: 40%;
+					text-align: center;
+					padding: 0 20px;
+					width: 100%;
+
+					h3 {
+						display: table-cell;
+						vertical-align: middle;
+					}
+
+					@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+						height: 30%;
+					}
+
+					@media screen and (min-width: 768px) {
+						padding: 20px 0;
+					}
+				}
+
+				.desc-wrapper {
+					background-color: #FFFFFF;
+					height: 60%;
+
+					@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+						height: 70%;
+					}
+
+					a {
+						border-bottom: 1px solid #E9E6E6;
+						display: table;
+						height: 25%;
+						letter-spacing: 2px; 
+						margin: 0;
+						padding: 0 20px;
+						text-align: left;
+						width: 100%;
+
+						&:last-child {
+							border-bottom: none;
+						}
+
+						span {
+							color: #A3A69E;
+							display: table-cell;
+							font-family: 'Gotham-Medium';
+							font-size: 12px;
+							text-transform: uppercase;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.logo-wrapper {
+				height: 90%;
+				padding: 20px;
+				position: relative;
+
+				.pointer {
+					background: url("../imgs/carousel-card-pointer.png") no-repeat;
+					@include image-2x("../imgs/carousel-card-pointer@2x.png", 70px, 70px);
+					display: block;
+					height: 70px;
+					width: 70px;
+					margin: 0 auto;
+					position: absolute;
+					bottom: 10px;
+					left: 50%;
+					margin-left: -35px;
+
+					@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+						background: none;
+					}
+
+					@media screen and (min-width: 768px) {
+						bottom: 20px;
+					}
+
+					@media screen and (min-width: 992px) {
+						display: none;
+					}
+				}
+
+				p {
+
+					@media screen and (min-width: 768px) {
+						padding: 0 100px;
+					}
+				}
+
+				@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+					height: 85%;
+					padding: 0 20px;
+				}
+			}
+
+			.desc-wrapper {
+				background: #555555;
+				height: 10%;
+
+				@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+					height: 15%;
+				}
+			}
+
+			.open {
+				cursor: pointer;
+				color: #FFF;
+				height: 100%;
+				font-style: normal;
+				font-size: 10px;
+				text-align: center;
+				text-transform: uppercase;
+
+				@media screen and (min-width: 768px) {
+					font-size: 12px;
+				}
+
+				span {
+					color: #FFF;
+				}
+			}
+		}
+
+		// .close {
+		// 	background-color: #394039;
+		// 	border-radius: 50px;
+		// 	color: #FFF;
+		// 	display: block;
+		// 	font-family: 'Gotham-Medium';
+		// 	font-style: normal;
+		// 	position: absolute;
+		// 	top: 20px; left: 20px;
+		// 	text-align: center;
+		// 	opacity: 1;
+		// 	line-height: 25px;
+		// 	height: 30px;
+		// 	width: 30px;
+
+		// 	@media screen and (min-width: 768px) {
+		// 		top: 10px; left: 40px;
+		// 	}
+		// }
+	}
+}
+
+.pagination {
+	color: #555555;
+	display: none;
+	font-family: 'Gotham-Medium';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+
+	.slick-prev {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		padding-right: 15px;
+		outline: none;
+	}
+
+	.slick-next {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		padding-left: 15px;
+		outline: none;
+	}
+
+	.slick-disabled {
+		opacity: 0;
+		cursor: default;
+	}
+
+	.index, .total {
+		color: #555555;
+		font-family: 'Gotham-Medium';
+	}
+}	

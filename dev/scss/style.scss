@@ -1,19 +1,19 @@
 @import 'fonts';
 @import 'mixins';
-@import 'carousel';
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
 body {
 	background: #F3F3F3;
+}
 
-	&.carousel-page {
-		overflow: hidden;
-		position: relative;
-	}
+li {
+  text-decoration: none;
 }
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
+
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */

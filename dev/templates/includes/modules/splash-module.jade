@@ -1,2 +1,11 @@
-div.landing
+include ../mixins.jade
+
+div.splash
   h2 Hi, I'm Gaby
+  nav.navbar
+    .container
+      ul.nav.navbar-nav.navbar-right
+        +nav-item("Who am I?", "#whoami")
+        +nav-item("Work", "#work")
+        +nav-item("Publicity & Speakng", "#publicity")
+        +nav-item("What's in my brain", "#projects")
