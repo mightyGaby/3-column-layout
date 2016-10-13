@@ -3,7 +3,7 @@
   perspective: 1000px; }
 
 /* flip the pane when hovered */
-.flip-container.clicked .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+.flip-container.selected .flipper, .flip-container.selected .flipper, .flip-container.flip .flipper {
   transform: rotateY(180deg); }
 
 .flip-container, .front, .back {
@@ -43,10 +43,35 @@ html {
   height: 100%; }
 
 .portfolio-page {
-  position: relative; }
+  position: relative;
+  /*projects list nav */ }
   .portfolio-page ul {
     margin: 0;
     padding-left: 10px; }
+  .portfolio-page .splash {
+    max-height: 100%;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
+    .portfolio-page .splash .navbar-brand {
+      display: inline-block;
+      visibility: hidden; }
+    .portfolio-page .splash .navbar-brand.animated {
+      visibility: visible;
+      /*      -webkit-animation-duration: 1s;
+*/
+      /*-webkit-animation-delay: .5s;
+      -moz-animation-delay: .5s;
+      -o-animation-delay: .5s;
+      animation-delay: .5s;*/ }
+    .portfolio-page .splash.collapsed {
+      max-height: 50px;
+      /*      div span.animated{
+        position: absolute;
+        margin-left: 11px;
+        top: 70px;
+      }*/ }
   .portfolio-page .landing {
     /*    height: 50px;
     margin: 50px;*/ }
@@ -55,9 +80,6 @@ html {
       margin: 20px; }
   .portfolio-page .nav.landing {
     width: 100%; }
-    @media screen and (max-width: 768px) {
-      .portfolio-page .nav.landing {
-        display: block; } }
   .portfolio-page .nav.project-nav {
     background: #F3F3F3;
     /*  		box-shadow: 0px 15px 35px #BFBDBD;
@@ -76,19 +98,20 @@ html {
       opacity: 0; }
     .portfolio-page .nav.project-nav li {
       display: table;
-      height: 18%;
+      /*  			height: 18%;
+*/
       list-style-type: none;
       text-align: center;
-      padding: 20px 0;
+      /*  			padding: 20px 0;
+*/
       width: 100%; }
-      .portfolio-page .nav.project-nav li:last-child {
-        border-bottom: 0px;
-        height: 10%; }
       .portfolio-page .nav.project-nav li a {
         display: table-cell;
         font-size: 12px;
-        padding: 0 20px;
-        vertical-align: bottom; }
+        /*  				padding: 0 20px;
+*/
+        vertical-align: bottom;
+        /* optional logo styles for navigation categories */ }
         .portfolio-page .nav.project-nav li a .logo {
           height: 50px;
           width: 100px;
@@ -98,35 +121,35 @@ html {
         position: static; }
         .portfolio-page .nav.project-nav li a {
           letter-spacing: 2px; } }
-  .portfolio-page .project-list {
+  .portfolio-page div.project-list {
     overflow: scroll;
     opacity: 1;
     -webkit-animation: fade-in 2s;
     -moz-animation: fade-in 2s;
     -o-animation: fade-in 2s;
     animation: fade-in 2s; }
-    .portfolio-page .project-list.hidden {
+    .portfolio-page div.project-list.hidden {
       opacity: 0; }
-    .portfolio-page .project-list ul {
+    .portfolio-page div.project-list ul {
       padding-top: 20px; }
-    .portfolio-page .project-list .content, .portfolio-page .project-list .flipper {
+    .portfolio-page div.project-list .content, .portfolio-page div.project-list .flipper {
       display: table;
       border-radius: 10px;
       box-shadow: 0px 0px 20px #BFBDBD;
       width: 100%;
       height: 100%; }
-      .portfolio-page .project-list .content p, .portfolio-page .project-list .flipper p {
+      .portfolio-page div.project-list .content p, .portfolio-page div.project-list .flipper p {
         display: table-cell;
         vertical-align: middle; }
-    .portfolio-page .project-list .project-card {
+    .portfolio-page div.project-list .project-card {
       list-style-type: none;
       margin-bottom: 10px;
       text-align: center;
       height: 45%; }
-      .portfolio-page .project-list .project-card.highlighted div {
+      .portfolio-page div.project-list .project-card.highlighted div {
         box-shadow: 0px 15px 35px #BFBDBD; }
       @media screen and (min-width: 768px) {
-        .portfolio-page .project-list .project-card {
+        .portfolio-page div.project-list .project-card {
           height: 33%; } }
   .portfolio-page .project-desc {
     overflow: hidden; }

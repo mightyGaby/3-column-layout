@@ -66,6 +66,9 @@ a, a:hover, a:focus, span {
   a.red, a:hover.red, a:focus.red, span.red {
     color: #FF4E45; }
 
+.margin-bottom-none {
+  margin-bottom: 0; }
+
 html {
   overflow: scroll;
   overflow-x: hidden; }
@@ -79,6 +82,7 @@ li {
 ::-webkit-scrollbar {
   width: 0px;
   /* remove scrollbar space */
+  height: 0px;
   background: transparent;
   /* optional: just make scrollbar invisible */ }
 

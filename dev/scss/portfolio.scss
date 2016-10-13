@@ -18,6 +18,35 @@ html {
     padding-left: 10px;
 	}
 
+  .splash{
+    max-height: 100%;
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    
+    .navbar-brand{
+      display: inline-block;
+      visibility: hidden;
+    }
+    .navbar-brand.animated{
+      visibility: visible;
+/*      -webkit-animation-duration: 1s;
+*/      /*-webkit-animation-delay: .5s;
+      -moz-animation-delay: .5s;
+      -o-animation-delay: .5s;
+      animation-delay: .5s;*/
+    }
+    &.collapsed{
+      max-height: 50px;
+/*      div span.animated{
+        position: absolute;
+        margin-left: 11px;
+        top: 70px;
+      }*/
+    }
+  }
+
   .landing{
 /*    height: 50px;
     margin: 50px;*/
@@ -26,12 +55,11 @@ html {
       margin: 20px;
     }
   }
+
+/*projects list nav */
   .nav {
     &.landing {
       width: 100%;
-       @media screen and (max-width: 768px) {
-        display: block;
-       }
     }
   	&.project-nav {
   		background: #F3F3F3;
@@ -52,23 +80,19 @@ html {
 
   		li {
   			display: table;
-  			height: 18%;
-  			list-style-type: none;
+/*  			height: 18%;
+*/  			list-style-type: none;
   			text-align: center;
-  			padding: 20px 0;
-  			width: 100%;
-
-  			&:last-child {
-  				border-bottom: 0px;
-  				height: 10%;
-  			}
+/*  			padding: 20px 0;
+*/  			width: 100%;
 
   			a {
   				display: table-cell;
   				font-size: 12px;
-  				padding: 0 20px;
-  				vertical-align: bottom;
+/*  				padding: 0 20px;
+*/  				vertical-align: bottom;
 
+          /* optional logo styles for navigation categories */
   				.logo {
   					height: 50px;
   					width: 100px;
@@ -87,7 +111,7 @@ html {
   	}
   }
 
-  .project-list {
+  div.project-list {
     overflow: scroll;
     opacity: 1;
 

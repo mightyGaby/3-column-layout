@@ -5,8 +5,9 @@ html
     .container-fluid.full-height
       .row.full-height
         include includes/modules/splash-module.jade
-        include includes/modules/project-nav.jade
-        include includes/modules/project-cards.jade
-        include includes/modules/project-details.jade
+        div.portfolio-container.full-height.hidden
+          include includes/modules/navigation.jade
+          include includes/modules/project-cards.jade
+          include includes/modules/project-details.jade
   //- section.footer
   include includes/scripts.jade

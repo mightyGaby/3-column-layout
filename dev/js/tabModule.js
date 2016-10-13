@@ -62,6 +62,9 @@
       this.showDetails(itemIndex);
       this.scrollToSelected(this.projectsContainer, projectItem);
       this.collapseProjects();
+      $(".project-card").on('click',function(){
+        $(this).toggleClass("selected");
+      });
     },
 
     onclick_hideDetails: function(e) {
@@ -79,7 +82,7 @@
       this.root.find('.selected').removeClass('selected');
       item.addClass('selected');
       container.animate({
-          scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+          scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop(50)
       });
     },
 
@@ -102,7 +105,7 @@
       var deselectProjectCard = this.root.find('.project-card.highlighted'),
           selectProjectCard = this.root.find('.project-card.' + category);
       deselectProjectCard.removeClass('highlighted');
-      selectProjectCard.addClass('highlighted');
+      selectProjectCard.addClass('highlighted').addClass("animate jello");;
     },
 
     showDetails: function(index) {

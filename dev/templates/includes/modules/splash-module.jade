@@ -2,16 +2,17 @@ include ../mixins.jade
 include ../variables.jade
 
 div.splash
-  nav.navbar.navbar-fixed-bottom
+  nav.navbar.margin-bottom-none
     .container
-      a.navbar-brand.hidden GRF
+      h3.navbar-brand.hidden: a Gaby
       ul.nav.navbar-nav.navbar-right
         +global-nav-item("Who am I?", "#whoami")
         +global-nav-item("Work", "#work")
         +global-nav-item("Publicity & Speakng", "#publicity")
         +global-nav-item("What's in my brain", "#projects")
-  .container
-    h2 Hi, I'm Gaby.
+  .container.animated
+    h2 Hi, I'm 
+      span.animated Gaby.
     h3 I can't stay away from a good problem.
 
     ul.hidden-xs.col-sm-3.col-md-2.full-height.nav.landing

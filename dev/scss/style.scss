@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'mixins';
+@import 'helpers';
 
 html {
   overflow: scroll;
@@ -16,6 +17,7 @@ li {
 
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
+    height: 0px;
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 /* optional: show position indicator in red */

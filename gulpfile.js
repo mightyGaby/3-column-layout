@@ -7,6 +7,7 @@ var cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     pump = require('pump'),
     sass = require('gulp-sass'),
+    // animate = require('animate.css'),
     jade = require('gulp-jade');
 
 // Compile Jade templates
