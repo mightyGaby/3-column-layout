@@ -17,18 +17,10 @@
 			this.descItem = this.root.find('.desc-item');
       this.projectsContainer = this.root.find('.project-list');
       this.projectCard = this.root.find('.project-card');
-		    //setup
-		    // this.setup();
 
 			//events
 			this.events();
 		},
-
-		// setup: function() {
-		// 	setTimeout($.proxy(function(){
-		//  		this.descItem.first().removeClass('outofview');
-		//  	}, this), 600);
-		// },
 
 		events:function() {
 			this.root
@@ -62,7 +54,7 @@
       this.showDetails(itemIndex);
       this.scrollToSelected(this.projectsContainer, projectItem);
       this.collapseProjects();
-      $(".project-card").on('click',function(){
+      this.projectCard.on('click',function(){
         $(this).toggleClass("selected");
       });
     },
