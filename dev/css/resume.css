@@ -66,6 +66,30 @@ a, a:hover, a:focus, span {
   a.red, a:hover.red, a:focus.red, span.red {
     color: #FF4E45; }
 
+@-webkit-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-moz-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-o-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
 .carousel-module {
   height: 80%;
   overflow: hidden; }

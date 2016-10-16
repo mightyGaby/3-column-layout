@@ -10,7 +10,7 @@
   js.splashModule.prototype = {
     init: function(){
       //global vars
-      this.projectNav = $('.project-nav');
+      this.projectNav = $('.nav.landing');
       this.globalNav = this.root.find('.navbar');
       this.projectsContainer = $('.project-list');
       this.portfolioContainer = $('.portfolio-container');
@@ -21,8 +21,9 @@
 
     events:function() {
       this.root
-        .on('click', '.show-all-projects', $.proxy(this.onclick_hideLanding, this))
-        .on('click', '.show-all-projects', $.proxy(this.onclick_showPortfolio, this));
+        .on('click', 'a.show-all-projects', $.proxy(this.onclick_hideLanding, this))
+        .on('click', 'a.show-all-projects', $.proxy(this.onclick_showPortfolio, this))
+        .on('click', 'a.show-all-projects', $.proxy(this.onclick_transitionNav, this));
     },
 
     onclick_hideLanding: function(e) {
@@ -32,13 +33,18 @@
       // this.globalNav.removeClass('navbar-fixed-top').addClass('navbar-fixed-bottom');
       // $('h3.navbar-brand').addClass('animated fadeInUp');
       // $('span.animated').addClass('fadeOutUp');
-      setTimeout(this.scrollToSelected($('body'), this.portfolioContainer);
+      this.scrollToSelected($('body'), this.portfolioContainer);
     },
     
     onclick_showPortfolio: function(e){
       e.preventDefault();
       this.projectsContainer.removeClass('hidden');
-      this.portfolioContainer.removeClass('hidden');
+      this.projectsContainer.find('ul').addClass('slideInUp');
+      this.portfolioContainer.removeClass('container').addClass('full-height');
+    },
+    onclick_transitionNav: function(e){
+      e.preventDefault();
+      this.projectNav.addClass('project-nav').removeClass('landing');
     },
     scrollToSelected: function(container, item){
       var container = container,

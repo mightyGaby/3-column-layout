@@ -1,3 +1,27 @@
+@-webkit-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-moz-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-o-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 1000px; }
@@ -46,7 +70,8 @@ html {
   position: relative;
   /*projects list nav */ }
   .portfolio-page ul {
-    margin: 0;
+    /*		margin: 0;
+*/
     padding-left: 10px; }
   .portfolio-page .splash {
     max-height: 100%;
@@ -72,31 +97,29 @@ html {
         margin-left: 11px;
         top: 70px;
       }*/ }
-  .portfolio-page .landing {
-    /*    height: 50px;
-    margin: 50px;*/ }
-    .portfolio-page .landing button {
-      display: block;
-      margin: 20px; }
-  .portfolio-page .nav.landing {
-    width: 100%; }
-  .portfolio-page .nav.project-nav {
+  .portfolio-page ul.nav.landing {
+    width: 100%;
+    /*      padding-top: 10px;
+*/ }
+  .portfolio-page ul.nav.project-nav {
     background: #F3F3F3;
     /*  		box-shadow: 0px 15px 35px #BFBDBD;
 */
     overflow: scroll;
     margin: 0;
+    padding-top: 40px;
     /*  		z-index: 1;
-*/
     padding-bottom: 20px;
-    opacity: 1;
-    -webkit-animation: fade-in 2s;
-    -moz-animation: fade-in 2s;
-    -o-animation: fade-in 2s;
-    animation: fade-in 2s; }
-    .portfolio-page .nav.project-nav.hidden {
-      opacity: 0; }
-    .portfolio-page .nav.project-nav li {
+      /*opacity: 1;*/
+    -webkit-animation: add-padding-top 1s;
+    -moz-animation: add-padding-top 1s;
+    -o-animation: add-padding-top 1s;
+    animation: add-padding-top 1s;
+    /*      -webkit-animation: fade-in 2s;
+      -moz-animation:    fade-in 2s;
+      -o-animation:      fade-in 2s;
+      animation:         fade-in 2s;*/ }
+    .portfolio-page ul.nav.project-nav li {
       display: table;
       /*  			height: 18%;
 */
@@ -105,21 +128,21 @@ html {
       /*  			padding: 20px 0;
 */
       width: 100%; }
-      .portfolio-page .nav.project-nav li a {
+      .portfolio-page ul.nav.project-nav li a {
         display: table-cell;
         font-size: 12px;
         /*  				padding: 0 20px;
 */
         vertical-align: bottom;
         /* optional logo styles for navigation categories */ }
-        .portfolio-page .nav.project-nav li a .logo {
+        .portfolio-page ul.nav.project-nav li a .logo {
           height: 50px;
           width: 100px;
           background-size: 100px 50px; }
     @media screen and (min-width: 992px) {
-      .portfolio-page .nav.project-nav {
+      .portfolio-page ul.nav.project-nav {
         position: static; }
-        .portfolio-page .nav.project-nav li a {
+        .portfolio-page ul.nav.project-nav li a {
           letter-spacing: 2px; } }
   .portfolio-page div.project-list {
     overflow: scroll;

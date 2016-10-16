@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'animations';
 @import 'cardflip';
 
 @-webkit-keyframes fade-in {
@@ -14,8 +15,8 @@ html {
 	position: relative;
 
 	ul {
-		margin: 0;
-    padding-left: 10px;
+/*		margin: 0;
+*/    padding-left: 10px;
 	}
 
   .splash{
@@ -47,41 +48,31 @@ html {
     }
   }
 
-  .landing{
-/*    height: 50px;
-    margin: 50px;*/
-    button {
-      display: block;
-      margin: 20px;
-    }
-  }
-
 /*projects list nav */
-  .nav {
+  ul.nav {
     &.landing {
       width: 100%;
-    }
+/*      padding-top: 10px;
+*/    }
   	&.project-nav {
   		background: #F3F3F3;
 /*  		box-shadow: 0px 15px 35px #BFBDBD;
 */    overflow: scroll;
   		margin: 0;
+      padding-top: 40px;
 /*  		z-index: 1;
-*/      padding-bottom: 20px;
-      opacity: 1;
-
-      -webkit-animation: fade-in 2s;
+    padding-bottom: 20px;
+      /*opacity: 1;*/
+      @include animation('add-padding-top 1s');
+/*      -webkit-animation: fade-in 2s;
       -moz-animation:    fade-in 2s;
       -o-animation:      fade-in 2s;
-      animation:         fade-in 2s;
-      &.hidden {
-        opacity: 0;
-      }
+      animation:         fade-in 2s;*/
 
   		li {
   			display: table;
 /*  			height: 18%;
-*/  			list-style-type: none;
+*/  		list-style-type: none;
   			text-align: center;
 /*  			padding: 20px 0;
 */  			width: 100%;

@@ -114,13 +114,5 @@
       this.descContainer.attr('aria-hidden', 'true');
       this.expandProjectContainer();
     }
-
-		// animation: function() {
-		// 	this.root.find('.slide').each(function(i, el){	
-		// 		setTimeout(function(){
-		// 			$(el).removeClass('outofview');
-		// 		}, i * 300);
-		// 	});
-		// }
 	};
 })(jQuery);
