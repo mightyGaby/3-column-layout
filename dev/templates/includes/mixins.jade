@@ -5,7 +5,7 @@ mixin project-card(index, projectName, category)
       p #{projectName}
 
 mixin global-nav-item(name, href)
-  li: a(hrev="#{href}") #{name}
+  li: a(href="#{href}") #{name}
 
 mixin project-nav-item(title, category)
   li: a.goth.nav-item(data-category="#{category}" href="#") #{title}
