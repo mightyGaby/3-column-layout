@@ -1,0 +1,41 @@
+@-webkit-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-moz-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@-o-keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+@keyframes add-padding-top {
+  0% {
+    padding-top: 10px; }
+  100% {
+    padding-top: 40px; } }
+
+.box-container {
+  background-color: black;
+  cursor: none;
+  height: 50%; }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  left: 50%; }
+
+img {
+  position: absolute;
+  width: 80px;
+  height: 80px; }
