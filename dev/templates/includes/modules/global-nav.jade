@@ -1,0 +1,11 @@
+include ../variables.jade
+include ../mixins.jade
+
+nav.navbar.margin-bottom-none
+  .container
+    h3.navbar-brand.hidden: a Gaby
+    ul.nav.navbar-nav.navbar-right
+      +global-nav-item("Who am I?", "about.html")
+      +global-nav-item("Work", "index.html")
+      +global-nav-item("Publicity & Speakng", "#publicity")
+      +global-nav-item("What's in my brain", "#projects")

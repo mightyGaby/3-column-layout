@@ -97,7 +97,7 @@
       var deselectProjectCard = this.root.find('.project-card.highlighted'),
           selectProjectCard = this.root.find('.project-card.' + category);
       deselectProjectCard.removeClass('highlighted');
-      selectProjectCard.addClass('highlighted').addClass("animate jello");;
+      selectProjectCard.addClass('highlighted');
     },
 
     showDetails: function(index) {

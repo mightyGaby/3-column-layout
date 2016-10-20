@@ -15,8 +15,7 @@ html {
 	position: relative;
 
 	ul {
-/*		margin: 0;
-*/    padding-left: 10px;
+    padding-left: 10px;
 	}
 
   .splash{
@@ -39,7 +38,7 @@ html {
       animation-delay: .5s;*/
     }
     &.collapsed{
-      max-height: 50px;
+      max-height: 0;
 /*      div span.animated{
         position: absolute;
         margin-left: 11px;

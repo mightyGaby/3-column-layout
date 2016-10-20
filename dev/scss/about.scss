@@ -3,9 +3,10 @@
 
 .box-container {
   background-color: black;
-  cursor: none;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
   height: 50%;
 }
+
 .box{
   width: 100px;
   height: 100px;
@@ -14,7 +15,6 @@
   position: absolute;
   left: 50%;
 }
-
 
 img{
   position: absolute;

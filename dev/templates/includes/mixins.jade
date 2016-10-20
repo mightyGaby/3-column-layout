@@ -19,3 +19,17 @@ mixin project-card-mobile(index, projectName, category)
           p #{projectName}
       .back
         p some content
+
+mixin publicity(title, date, type, source, url)
+  if url != null
+    div.publicity
+      p #{type}
+      h5: a(href="#{url}" target="_blank") #{title}
+      p.source #{source}
+      p.date #{date}
+  else
+    div.publicity
+      p #{type}
+      h5 #{title}
+      p.source #{source}
+      p.date #{date}

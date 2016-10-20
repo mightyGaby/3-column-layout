@@ -70,8 +70,6 @@ html {
   position: relative;
   /*projects list nav */ }
   .portfolio-page ul {
-    /*		margin: 0;
-*/
     padding-left: 10px; }
   .portfolio-page .splash {
     max-height: 100%;
@@ -91,7 +89,7 @@ html {
       -o-animation-delay: .5s;
       animation-delay: .5s;*/ }
     .portfolio-page .splash.collapsed {
-      max-height: 50px;
+      max-height: 0;
       /*      div span.animated{
         position: absolute;
         margin-left: 11px;

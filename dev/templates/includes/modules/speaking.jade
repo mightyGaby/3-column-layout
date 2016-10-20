@@ -1,0 +1,15 @@
+include ../mixins.jade
+include ../variables.jade
+.container
+  .row
+    h4 
+  .row
+    .col-xs-12.col-s-8
+      h2 Publicity
+      - each feature in features
+        +publicity(feature.title, feature.date, feature.type, feature.source, feature.url)
+  .row
+    .col-xs-12.col-s-8
+      h2 Speaking
+      - each item in speaking
+        +publicity(item.title, item.date, item.type, item.source, item.url)

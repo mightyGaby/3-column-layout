@@ -1,0 +1,1 @@
+!function(n){var o=window.js||(window.js={});o.app={init:function(){this.initComponents()},initComponents:function(){n(".portfolio-container").each(function(n,i){new o.portfolioModule(i)}),n(".tab-module").each(function(n,i){new o.tabModule(i)}),n(".box-container").each(function(n,i){new o.boxGameModule(i)})}},n(document).ready(n.proxy(o.app.init,o.app))}(jQuery);
