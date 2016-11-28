@@ -23,10 +23,10 @@
     },
 
     onclick_flipCard: function(e) {
-      console.log("test")
+      console.log("test");
       e.preventDefault();
       this.project.on('click',function(){
-        $(this).toggleClass("clicked")
+        $(this).toggleClass("clicked");
       });
     }
   };

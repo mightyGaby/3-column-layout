@@ -54,9 +54,9 @@
       this.showDetails(itemIndex);
       this.scrollToSelected(this.projectsContainer, projectItem);
       this.collapseProjects();
-      this.projectCard.on('click',function(){
-        $(this).toggleClass("selected");
-      });
+      // this.projectCard.on('click',function(){
+      //   $(this).toggleClass("selected");
+      // });
     },
 
     onclick_hideDetails: function(e) {

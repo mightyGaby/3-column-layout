@@ -18,9 +18,9 @@
             });
 
             // card animations component
-            // $(".project-list").each(function(i, el){
-            //     new js.cardModule(el);
-            // });
+            $(".project-list").each(function(i, el){
+                new js.cardModule(el);
+            });
         }
     };
 

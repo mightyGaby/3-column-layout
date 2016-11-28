@@ -1,24 +1,31 @@
 {
-  "name": "Scratch",
+  "name": "3-column-layout",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "animate.css": "^3.5.2",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-jade": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.0",
-    "node-sass": "^3.8.0",
-    "pump": "^1.0.1"
-  },
-  "devDependencies": {
-    "gulp-sass": "^2.3.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mightyGaby/3-column-layout.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mightyGaby/3-column-layout/issues"
+  },
+  "homepage": "https://github.com/mightyGaby/3-column-layout#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-install": "^0.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "node-sass": "^3.10.1",
+    "pump": "^1.0.1",
+    "uglify": "^0.1.5"
+  }
 }

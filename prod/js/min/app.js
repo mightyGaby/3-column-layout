@@ -1,0 +1,1 @@
+!function(n){var o=window.js||(window.js={});o.app={init:function(){this.initComponents()},initComponents:function(){n(".splash").each(function(n,i){new o.splashModule(i)}),n(".tab-module").each(function(n,i){new o.tabModule(i)}),n(".project-list").each(function(n,i){new o.cardModule(i)})}},n(document).ready(n.proxy(o.app.init,o.app))}(jQuery);

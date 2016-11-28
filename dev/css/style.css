@@ -93,6 +93,9 @@ a, a:hover, a:focus, span {
 .margin-bottom-none {
   margin-bottom: 0; }
 
+.project-desc[aria-hidden="false"] li h3 {
+  padding-top: 50px; }
+
 html {
   overflow: scroll;
   overflow-x: hidden; }

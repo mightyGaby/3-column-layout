@@ -1,3 +1,8 @@
+mixin project-details(title)
+  div
+    button.close &#10005;
+    h3 #{title}
+
 mixin project-card(index, projectName, category)
   li(class="hidden-xs col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card #{category}" data-desc-index="#{index}")
     .content
@@ -12,7 +17,7 @@ mixin project-nav-item(title, category)
 
 
 mixin project-card-mobile(index, projectName, category)
-  li(class="visible-xs-block col-xs-12 col-sm-6 col-md-4 col-lg-3 project-card flip-container #{category}" data-desc-index="#{index}" ontouchstart="this.classList.toggle('click');")
+  li(class="visible-xs-block col-xs-12 project-card #{category}" data-desc-index="#{index}" ontouchstart="this.classList.toggle('hover');")
     .flipper
       .front
           //- insert image here
