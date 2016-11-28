@@ -17,7 +17,7 @@ mixin project-nav-item(title, category)
 
 
 mixin project-card-mobile(index, projectName, category)
-  li(class="visible-xs-block col-xs-12 project-card #{category}" data-desc-index="#{index}" ontouchstart="this.classList.toggle('hover');")
+  li(class="visible-xs-block col-xs-12 project-card #{category}" data-desc-index="#{index}" ontouchstart="this.classList.toggle('clicked');")
     .flipper
       .front
           //- insert image here

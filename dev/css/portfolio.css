@@ -27,7 +27,7 @@
   perspective: 1000px; }
 
 /* flip the pane when hovered */
-.project-card:hover .flipper, .project-card.hover .flipper, .project-card.flip .flipper {
+.project-card.clicked .flipper, .project-card.flip .flipper {
   transform: rotateY(180deg); }
 
 /* flip speed goes here */

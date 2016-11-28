@@ -52,11 +52,8 @@
           itemIndex = projectItem.attr('data-desc-index');
 
       this.showDetails(itemIndex);
-      this.scrollToSelected(this.projectsContainer, projectItem);
+      this.selectItem(projectItem);
       this.collapseProjects();
-      // this.projectCard.on('click',function(){
-      //   $(this).toggleClass("selected");
-      // });
     },
 
     onclick_hideDetails: function(e) {
@@ -67,15 +64,19 @@
       this.hideDetails(descItem);
     },
 
-    scrollToSelected: function(container, item){
-      var container = container,
-          scrollTo = item;
-
+    selectItem: function(item){
       this.root.find('.selected').removeClass('selected');
       item.addClass('selected');
+      this.scrollToSelected();
+    },
+
+    scrollToSelected: function(){
+      var container = this.projectsContainer,
+          scrollTo = this.projectsContainer.find('.project-card.selected');
       container.animate({
-          scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop(50)
-      });
+          // scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+          scrollTop: scrollTo.offset().top - container.offset().top
+      }); 
     },
 
     collapseProjects: function() {

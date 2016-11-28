@@ -19,15 +19,14 @@
 
     events:function() {
       this.root
-        .on('click', '.project-card', $.proxy(this.onclick_flipCard, this));
+        .on('click', this.project, $.proxy(this.onclick_flipCard, this));
     },
 
     onclick_flipCard: function(e) {
-      console.log("test");
       e.preventDefault();
-      this.project.on('click',function(){
-        $(this).toggleClass("clicked");
-      });
+      // this.project.on('click',function(){
+        // $(this).toggleClass("clicked");
+      // });
     }
   };
 })(jQuery);
