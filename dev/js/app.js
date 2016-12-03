@@ -6,31 +6,31 @@
 		init: function() {
             this.initComponents();
 		},
-        initComponents: function(){
-            // splash page component
-            $(".portfolio-container").each(function(i, el){
-                new js.portfolioModule(el);
-            });
+      initComponents: function(){
+          // splash page component
+          $(".portfolio-container").each(function(i, el){
+              new js.portfolioModule(el);
+          });
 
-            // project navigation component
-            $(".tab-module").each(function(i, el){
-                new js.tabModule(el);
-            });
+          // project navigation component
+          $(".tab-module").each(function(i, el){
+              new js.tabModule(el);
+          });
 
-            // about me
-            $(".box-container").each(function(i, el){
-                new js.boxGameModule(el);
-            });
+          // about me
+          $(".box-container").each(function(i, el){
+              new js.boxGameModule(el);
+          });
 
-            // $(".navbar-nav").each(function(i, el){
-            //     console.log("test")
-            // });
-          
-            // card animations component
-            // $(".project-list").each(function(i, el){
-            //     new js.cardModule(el);
-            // });
-        }
+          // $(".navbar-nav").each(function(i, el){
+          //     console.log("test")
+          // });
+        
+          // card animations component
+          // $(".project-list").each(function(i, el){
+          //     new js.cardModule(el);
+          // });
+      }
     };
 
     // kickoff app

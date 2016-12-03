@@ -27,15 +27,20 @@
   perspective: 1000px; }
 
 /* flip the pane when hovered */
-.flip-container.selected .flipper, .flip-container.selected .flipper, .flip-container.flip .flipper {
+/*  .flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+  }
+*/
+.flip-container.flip .flipper {
   transform: rotateY(180deg); }
 
-.flip-container, .front, .back {
+/*.flip-container, .front, .back {
   width: 320px;
-  height: 480px; }
-
+  height: 480px;
+}*/
 /* flip speed goes here */
 .flipper {
+  height: 100%;
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative; }
@@ -163,8 +168,6 @@ html {
       @media screen and (min-width: 768px) {
         .portfolio-page div.project-list .project-card {
           height: 33%; } }
-    .portfolio-page div.project-list .flipper {
-      display: table-row; }
     .portfolio-page div.project-list .content, .portfolio-page div.project-list .front, .portfolio-page div.project-list .back {
       display: table;
       border-radius: 10px;
