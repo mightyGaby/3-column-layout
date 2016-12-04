@@ -1,0 +1,31 @@
+@import 'variables';
+
+.desc-item {
+  h3 {
+    padding-top: 80px;
+    letter-spacing: 2px;
+  }
+  h4 {
+    letter-spacing: 2px;
+    font-size: 14px;
+    &:after {
+      height: 2px;
+      display: block;
+      width: 30px;
+      background: $accent-color;
+      content: '';
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+  }
+  .sub {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 75%;
+    font-style: italic;
+  }
+  .content {
+    padding-top: 50px;
+  }
+}
+
